@@ -134,9 +134,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="tempCode.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="assets\Temps\t1.png" />
   </ItemGroup>
   <ItemGroup>
