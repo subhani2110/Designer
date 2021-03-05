@@ -12,7 +12,7 @@ namespace Badge_Designer_Wpf.ViewModels
 {
     public class ShellViewModel : Conductor<object>
     {
-        List<Brush> Colors = new List<Brush>
+        List<SolidColorBrush> Colors = new List<SolidColorBrush>
         {
             (SolidColorBrush)new BrushConverter().ConvertFromString("#E9C617"), //Gold
             (SolidColorBrush)new BrushConverter().ConvertFromString("#E2E2E2"), //Silvery White
@@ -23,11 +23,13 @@ namespace Badge_Designer_Wpf.ViewModels
             (SolidColorBrush)new BrushConverter().ConvertFromString("#000000"), //Black
         };
 
+        string DivUsed, OrdUsed, ChrUsed;
+
         public ShellViewModel()
         {
             //Populating Colors Lists
 
-            ColorsList = new BindableCollection<Brush>(Colors);
+            ColorsList = new BindableCollection<SolidColorBrush>(Colors);
 
             //Initial Colors
 
@@ -44,9 +46,9 @@ namespace Badge_Designer_Wpf.ViewModels
 
         #region Color Properties
 
-        private BindableCollection<Brush> colorsList;
+        private BindableCollection<SolidColorBrush> colorsList;
 
-        public BindableCollection<Brush> ColorsList
+        public BindableCollection<SolidColorBrush> ColorsList
         {
             get { return colorsList; }
             set
@@ -56,9 +58,9 @@ namespace Badge_Designer_Wpf.ViewModels
             }
         }
 
-        private Brush lineing;
+        private SolidColorBrush lineing;
 
-        public Brush Lineing
+        public SolidColorBrush Lineing
         {
             get { return lineing; }
             set
@@ -68,9 +70,9 @@ namespace Badge_Designer_Wpf.ViewModels
             }
         }
 
-        private Brush mantling;
+        private SolidColorBrush mantling;
 
-        public Brush Mantling
+        public SolidColorBrush Mantling
         {
             get { return mantling; }
             set
@@ -80,9 +82,9 @@ namespace Badge_Designer_Wpf.ViewModels
             }
         }
 
-        private Brush banner;
+        private SolidColorBrush banner;
 
-        public Brush Banner
+        public SolidColorBrush Banner
         {
             get { return banner; }
             set
@@ -92,9 +94,9 @@ namespace Badge_Designer_Wpf.ViewModels
             }
         }
 
-        private Brush shield;
+        private SolidColorBrush shield;
 
-        public Brush Shield
+        public SolidColorBrush Shield
         {
             get { return shield; }
             set
@@ -104,9 +106,9 @@ namespace Badge_Designer_Wpf.ViewModels
             }
         }
 
-        private Brush helmet;
+        private SolidColorBrush helmet;
 
-        public Brush Helmet
+        public SolidColorBrush Helmet
         {
             get { return helmet; }
             set
@@ -116,9 +118,9 @@ namespace Badge_Designer_Wpf.ViewModels
             }
         }
 
-        private Brush division;
+        private SolidColorBrush division;
 
-        public Brush Division
+        public SolidColorBrush Division
         {
             get { return division; }
             set
@@ -128,9 +130,9 @@ namespace Badge_Designer_Wpf.ViewModels
             }
         }
 
-        private Brush ordineries;
+        private SolidColorBrush ordineries;
 
-        public Brush Ordinaries
+        public SolidColorBrush Ordinaries
         {
             get { return ordineries; }
             set
@@ -140,9 +142,9 @@ namespace Badge_Designer_Wpf.ViewModels
             }
         }
 
-        private Brush charges;
+        private SolidColorBrush charges;
 
-        public Brush Charges
+        public SolidColorBrush Charges
         {
             get { return charges; }
             set
@@ -791,54 +793,63 @@ namespace Badge_Designer_Wpf.ViewModels
             Div6 = Visibility.Collapsed;
             Div7 = Visibility.Collapsed;
             Div8 = Visibility.Collapsed;
+            DivUsed = null;
         }
 
         public void ShowDiv1()
         {
             ResetVisibilities();
             Div1 = Visibility.Visible;
+            DivUsed = "ShowDiv1";
         }
 
         public void ShowDiv2()
         {
             ResetVisibilities();
             Div2 = Visibility.Visible;
+            DivUsed = "ShowDiv2";
         }
 
         public void ShowDiv3()
         {
             ResetVisibilities();
             Div3 = Visibility.Visible;
+            DivUsed = "ShowDiv3";
         }
 
         public void ShowDiv4()
         {
             ResetVisibilities();
             Div4 = Visibility.Visible;
+            DivUsed = "ShowDiv4";
         }
 
         public void ShowDiv5()
         {
             ResetVisibilities();
             Div5 = Visibility.Visible;
+            DivUsed = "ShowDiv5";
         }
 
         public void ShowDiv6()
         {
             ResetVisibilities();
             Div6 = Visibility.Visible;
+            DivUsed = "ShowDiv6";
         }
 
         public void ShowDiv7()
         {
             ResetVisibilities();
             Div7 = Visibility.Visible;
+            DivUsed = "ShowDiv7";
         }
 
         public void ShowDiv8()
         {
             ResetVisibilities();
             Div8 = Visibility.Visible;
+            DivUsed = "ShowDiv7";
         }
 
         public void ClearDiv()
@@ -865,84 +876,98 @@ namespace Badge_Designer_Wpf.ViewModels
             Ord11 = Visibility.Collapsed;
             Ord12 = Visibility.Collapsed;
             Ord13 = Visibility.Collapsed;
+            OrdUsed = null;
         }
 
         public void ShowOrd1()
         {
             ResetVisibilitiesOrd();
             Ord1 = Visibility.Visible;
+            OrdUsed = "ShowOrd1";
         }
 
         public void ShowOrd2()
         {
             ResetVisibilitiesOrd();
             Ord2 = Visibility.Visible;
+            OrdUsed = "ShowOrd2";
         }
 
         public void ShowOrd3()
         {
             ResetVisibilitiesOrd();
             Ord3 = Visibility.Visible;
+            OrdUsed = "ShowOrd3";
         }
 
         public void ShowOrd4()
         {
             ResetVisibilitiesOrd();
             Ord4 = Visibility.Visible;
+            OrdUsed = "ShowOrd4";
         }
 
         public void ShowOrd5()
         {
             ResetVisibilitiesOrd();
             Ord5 = Visibility.Visible;
+            OrdUsed = "ShowOrd5";
         }
 
         public void ShowOrd6()
         {
             ResetVisibilitiesOrd();
             Ord6 = Visibility.Visible;
+            OrdUsed = "ShowOrd6";
         }
 
         public void ShowOrd7()
         {
             ResetVisibilitiesOrd();
             Ord7 = Visibility.Visible;
+            OrdUsed = "ShowOrd7";
         }
 
         public void ShowOrd8()
         {
             ResetVisibilitiesOrd();
             Ord8 = Visibility.Visible;
+            OrdUsed = "ShowOrd8";
         }
 
         public void ShowOrd9()
         {
             ResetVisibilitiesOrd();
             Ord9 = Visibility.Visible;
+            OrdUsed = "ShowOrd9";
         }
 
         public void ShowOrd10()
         {
             ResetVisibilitiesOrd();
             Ord10 = Visibility.Visible;
+            OrdUsed = "ShowOrd10";
         }
 
         public void ShowOrd11()
         {
             ResetVisibilitiesOrd();
             Ord11 = Visibility.Visible;
+            OrdUsed = "ShowOrd11";
         }
 
         public void ShowOrd12()
         {
             ResetVisibilitiesOrd();
             Ord12 = Visibility.Visible;
+            OrdUsed = "ShowOrd12";
         }
 
         public void ShowOrd13()
         {
             ResetVisibilitiesOrd();
             Ord13 = Visibility.Visible;
+            OrdUsed = "ShowOrd13";
         }
 
         public void ClearOrd()
@@ -985,180 +1010,210 @@ namespace Badge_Designer_Wpf.ViewModels
             Chr27 = Visibility.Collapsed;
             Chr28 = Visibility.Collapsed;
             Chr29 = Visibility.Collapsed;
+            ChrUsed = null;
         }
 
         public void ShowChrAxe()
         {
             ResetVisibilitiesChrg();
             Chr1 = Visibility.Visible;
+            ChrUsed = "ShowChrAxe";
         }
 
         public void ShowChrMace()
         {
             ResetVisibilitiesChrg();
             Chr2 = Visibility.Visible;
+            ChrUsed = "ShowChrMace";
         }
 
         public void ShowChrEagle()
         {
             ResetVisibilitiesChrg();
             Chr3 = Visibility.Visible;
+            ChrUsed = "ShowChrEagle";
         }
 
         public void ShowChrEagle_F()
         {
             ResetVisibilitiesChrg();
             Chr4 = Visibility.Visible;
+            ChrUsed = "ShowChrEagle_F";
         }
 
         public void ShowChrEagle2()
         {
             ResetVisibilitiesChrg();
             Chr5 = Visibility.Visible;
+            ChrUsed = "ShowChrEagle2";
         }
 
         public void ShowChrEagle2_F()
         {
             ResetVisibilitiesChrg();
             Chr6 = Visibility.Visible;
+            ChrUsed = "ShowChrEagle2_F";
         }
 
         public void ShowChrCrest()
         {
             ResetVisibilitiesChrg();
             Chr7 = Visibility.Visible;
+            ChrUsed = "ShowChrCrest";
         }
 
         public void ShowChrCrest2()
         {
             ResetVisibilitiesChrg();
             Chr8 = Visibility.Visible;
+            ChrUsed = "ShowChrCrest2";
         }
 
         public void ShowChrDgr()
         {
             ResetVisibilitiesChrg();
             Chr9 = Visibility.Visible;
+            ChrUsed = "ShowChrDgr";
         }
 
         public void ShowChrDgr2()
         {
             ResetVisibilitiesChrg();
             Chr10 = Visibility.Visible;
+            ChrUsed = "ShowChrDgr2";
         }
 
         public void ShowChrCrown()
         {
             ResetVisibilitiesChrg();
             Chr11 = Visibility.Visible;
+            ChrUsed = "ShowChrCrown";
         }
 
         public void ShowChrEsc()
         {
             ResetVisibilitiesChrg();
             Chr12 = Visibility.Visible;
+            ChrUsed = "ShowChrEsc";
         }
 
         public void ShowChrGrab()
         {
             ResetVisibilitiesChrg();
             Chr13 = Visibility.Visible;
+            ChrUsed = "ShowChrGrab";
         }
 
         public void ShowChrHand()
         {
             ResetVisibilitiesChrg();
             Chr14 = Visibility.Visible;
+            ChrUsed = "ShowChrHand";
         }
 
         public void ShowChrGrf()
         {
             ResetVisibilitiesChrg();
             Chr15 = Visibility.Visible;
+            ChrUsed = "ShowChrGrf";
         }
 
         public void ShowChrGrf_F()
         {
             ResetVisibilitiesChrg();
             Chr16 = Visibility.Visible;
+            ChrUsed = "ShowChrGrf_F";
         }
 
         public void ShowChrGrf2()
         {
             ResetVisibilitiesChrg();
             Chr17 = Visibility.Visible;
+            ChrUsed = "ShowChrEsc";
         }
 
         public void ShowChrGrf2_F()
         {
             ResetVisibilitiesChrg();
             Chr18 = Visibility.Visible;
+            ChrUsed = "ShowChrGrf2_F";
         }
 
         public void ShowChrLion()
         {
             ResetVisibilitiesChrg();
             Chr19 = Visibility.Visible;
+            ChrUsed = "ShowChrLion";
         }
 
         public void ShowChrLion_F()
         {
             ResetVisibilitiesChrg();
             Chr20 = Visibility.Visible;
+            ChrUsed = "ShowChrLion_F";
         }
 
         public void ShowChrLion2()
         {
             ResetVisibilitiesChrg();
             Chr21 = Visibility.Visible;
+            ChrUsed = "ShowChrLion2";
         }
 
         public void ShowChrLion2_F()
         {
             ResetVisibilitiesChrg();
             Chr22 = Visibility.Visible;
+            ChrUsed = "ShowChrLion2_F";
         }
 
         public void ShowChrStag()
         {
             ResetVisibilitiesChrg();
             Chr23 = Visibility.Visible;
+            ChrUsed = "ShowChrStag";
         }
 
         public void ShowChrStag_F()
         {
             ResetVisibilitiesChrg();
             Chr24 = Visibility.Visible;
+            ChrUsed = "ShowChrStag_F";
         }
 
         public void ShowChrStag2()
         {
             ResetVisibilitiesChrg();
             Chr25 = Visibility.Visible;
+            ChrUsed = "ShowChrStag2";
         }
 
         public void ShowChrSrd()
         {
             ResetVisibilitiesChrg();
             Chr26 = Visibility.Visible;
+            ChrUsed = "ShowChrSrd";
         }
 
         public void ShowChrSrd2()
         {
             ResetVisibilitiesChrg();
             Chr27 = Visibility.Visible;
+            ChrUsed = "ShowChrSrd2";
         }
 
         public void ShowChrBoar()
         {
             ResetVisibilitiesChrg();
             Chr28 = Visibility.Visible;
+            ChrUsed = "ShowChrBoar";
         }
 
         public void ShowChrBoar_F()
         {
             ResetVisibilitiesChrg();
             Chr29 = Visibility.Visible;
+            ChrUsed = "ShowChrBoar_F";
         }
 
         public void ClearChr()
@@ -1172,6 +1227,25 @@ namespace Badge_Designer_Wpf.ViewModels
 
         public void temp1()
         {
+            //Object to Store In Database
+
+            //var ObjToStore = new
+            //{
+            //    Lineing = Lineing.Color.ToString(),
+            //    Mantling = Mantling.Color.ToString(),
+            //    Shield = Shield.Color.ToString(),
+            //    Division = Division.Color.ToString(),
+            //    Ordinaries = Ordinaries.Color.ToString(),
+            //    Charges = Charges.Color.ToString(),
+            //    Helmet = Helmet.Color.ToString(),
+            //    Banner = Banner.Color.ToString(),
+
+            //    BannerText,
+            //    DivUsed,
+            //    OrdUsed,
+            //    ChrUsed
+            //};
+
             //Imitating Data from Database
 
             var linDB = "#FF0000";
