@@ -1,0 +1,26 @@
+﻿<Application x:Class="Badge_Designer_Wpf.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Badge_Designer_Wpf">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <local:Bootstrapper x:Key="Bootstrapper" />
+                </ResourceDictionary>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <!--PRIMARY-->
+            <SolidColorBrush x:Key="PrimaryHueLightBrush" Color="BurlyWood"/>
+            <SolidColorBrush x:Key="PrimaryHueLightForegroundBrush" Color="Black"/>
+            <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="BurlyWood"/>
+            <SolidColorBrush x:Key="PrimaryHueMidForegroundBrush" Color="Black"/>
+            <SolidColorBrush x:Key="PrimaryHueDarkBrush" Color="BurlyWood"/>
+            <SolidColorBrush x:Key="PrimaryHueDarkForegroundBrush" Color="Black"/>
+            <!--ACCENT-->
+            <SolidColorBrush x:Key="SecondaryAccentBrush" Color="BurlyWood"/>
+            <SolidColorBrush x:Key="SecondaryAccentForegroundBrush" Color="Black"/>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
